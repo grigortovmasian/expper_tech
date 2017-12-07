@@ -1,0 +1,4 @@
+export GOOGLE_APPLICATION_CREDENTAILS=/home/pi/google/expper_tech_configs/service_account.json
+
+#Note you may need to change path to expper_tech_configs/service_account.json file.
+
