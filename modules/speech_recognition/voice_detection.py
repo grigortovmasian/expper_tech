@@ -4,8 +4,7 @@ from __future__ import division
 #from __future__ import absolute_import
 import re
 import sys
-import sys
-reload(sys)  # Reload does the trick!
+#reload(sys)  # Reload does the trick!
 #sys.setdefaultencoding('UTF8')
 
 from google.cloud import speech
@@ -18,7 +17,7 @@ from six.moves import queue
 # Audio recording parameters
 RATE = 44100
 CHUNK = int(RATE / 10)  # 100ms
-DEVICE_NUMBER=5;
+DEVICE_NUMBER=3;
 
 class voice_detection(object):
     def __init__(self):
