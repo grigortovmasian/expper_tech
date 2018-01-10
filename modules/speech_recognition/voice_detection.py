@@ -71,7 +71,6 @@ class voice_detection(object):
         self.closed = True
         # Signal the generator to terminate so that the client's
         # streaming_recognize method will not block the process termination.
-        self._buff.put(None)
         self._audio_interface.terminate()
 
 
@@ -88,6 +87,7 @@ class voice_detection(object):
             # Use a blocking get() to ensure there's at least one chunk of
             # data, and stop iteration if the chunk is None, indicating the
             # end of the audio stream.
+            self._buff.put(None)
             chunk = self._buff.get()
             if chunk is None:
                 return
